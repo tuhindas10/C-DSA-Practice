@@ -3,7 +3,7 @@
 using namespace std;
 
 
-//brute force
+//brute force -> O(n)
 vector<int> searchPositions(vector<int> &nums, int target) {
     int n = nums.size();
     int st=0, end=n-1;
@@ -17,6 +17,9 @@ vector<int> searchPositions(vector<int> &nums, int target) {
     if(first != -1) last = first+count-1;
     return {first, last};
 }
+
+//optimal -> 2*O(logn) 
+//concept of lower bound and upper bound
 
 int main() {
     vector<int> nums = {5,7,7,8,8,10};
